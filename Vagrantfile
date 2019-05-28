@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "scripts", "/scripts"
 
   # Auth.json + composer cache, don't sync changes back to avoid collisions.
-  config.vm.synced_folder ENV['HOME'] + '/.composer/',
+  config.vm.synced_folder ENV['HOME'] + '/.config/composer/',
     '/home/vagrant/.composer/',
     type: 'rsync',
     rsync__auto: false
